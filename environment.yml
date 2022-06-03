@@ -1,0 +1,12 @@
+name: borneo-pra
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - scipy
+  - pandas
+  - openpyxl
+  - seaborn
+  - ipykernel
+  - jupyter
