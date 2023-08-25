@@ -6,7 +6,11 @@ dependencies:
   - numpy
   - scipy
   - pandas
-  - openpyxl
+  - openpyxl<=3.1.0
   - seaborn
+  - matplotlib
+  - plotly
+  - rpy2
   - ipykernel
+  - ipywidgets
   - jupyter
