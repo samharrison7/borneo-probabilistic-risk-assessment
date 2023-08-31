@@ -13,7 +13,7 @@
 #                Defaults to -Inf for no lower truncation
 #              - lsup : upper truncation limit. Defaults to Inf for no upper truncation
 # 
-# Date of last modification: 03.07.2019
+# Date of last modification: 31.08.2023
 # 
 # Associated publication: Systematic consideration of parameter uncertainty and variability in
 #                         probabilistic species sensitivity distributions
@@ -24,7 +24,9 @@
 #            Technology and Society Laboratory, Lerchenfeldstrasse 5, 9014 St. Gallen, Switzerland
 # 
 # submitted to Integrated Environmental Assessment and Management in July 2019
-
+#
+# Modified by Sam Harrison (UK Centre for Ecology & Hydrology) to include seed to lock-in random sampling
+#
 # -------------------------------------------------------------------------------------------------
 
 
@@ -36,6 +38,9 @@ rmore <- function(values,
                   N,
                   linf = -Inf,
                   lsup = Inf){
+    
+  # Seed to lock in the "random" sampling
+  seed = 42
   
   # Test input
   stopifnot(any(!is.null(max), !is.null(min), !is.null(coef)))
@@ -252,6 +257,7 @@ rmore <- function(values,
   # Each distribution has the same weight (length(mid)=nb EP * N).
   step_distr <- c(left,do.call("c", mid),right)
   
+  set.seed(seed)
   return(sample(step_distr, N))
   
 }
