@@ -1,6 +1,6 @@
 # Oil Palm Probabilistic Risk Assessment
 
-Notebooks containing probabilistic risk assessment of chemicals measured in oil palm plantations.
+Notebooks containing the probabilistic risk assessment of chemicals measured in oil palm plantations.
 
 Launch these notebooks interactively on Binder: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/samharrison7/borneo-probabilistic-risk-assessment/HEAD?labpath=notebooks%2Foil-palm-risk-assessment.ipynb)
 
